@@ -1,7 +1,7 @@
 import { client, productsCollection } from "./mongoConnect.js";
 
 
-const deleteFruit = async () => {
+const deleteProducts = async () => {
     try {
         await client.connect()
         const itemDeleted = await productsCollection.deleteOne({ name: "one scoop" });
@@ -13,4 +13,4 @@ const deleteFruit = async () => {
     }
 };
 
-deleteFruit();
+deleteProducts();
